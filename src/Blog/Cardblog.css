@@ -1,0 +1,36 @@
+.card-container1 {
+  width: 348px;
+  height: 450px;
+  margin: 20px 10px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 5px 10px 10px 1px rgba(200, 200, 200, 0.2);
+}
+
+.img-blog {
+  width: 100%;
+}
+.card-text {
+  width: 300px;
+  height: 63px;
+  margin: 32px;
+}
+.card-text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1d164d;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.avatar p {
+  font-family: 'muli', sans-serif;
+  font-size: 16px;
+  color: #9e9baf;
+  padding-left: 15px;
+}

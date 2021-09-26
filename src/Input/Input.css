@@ -1,0 +1,45 @@
+.input {
+  display: block;
+  width: 343px;
+  height: 52px;
+  border: 0.5px solid #2d3561;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background: #ffffff;
+  transition: 0.2s;
+}
+
+.input::placeholder {
+  font-family: 'Muli', sans-serif;
+  font-size: 1rem;
+  color: #b4b4b4;
+}
+
+.input-button {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 5px;
+  background: #badc58;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.input-button img {
+  margin: 0 auto;
+}
+
+.input-button:hover {
+  filter: drop-shadow(0 10px 20px rgb(186, 220, 88, 0.5));
+}
+
+.btnjoin {
+  width: 93px;
+  height: 54px;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+.btnjoin:hover {
+  filter: drop-shadow(0 10px 20px rgb(186, 220, 88, 0.5));
+}

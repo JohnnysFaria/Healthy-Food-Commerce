@@ -1,0 +1,81 @@
+.blog-container {
+  width: 100%;
+  height: 100vh;
+  background: #fafafc;
+}
+
+.blog-title {
+  text-align: center;
+  padding-top: 48px;
+}
+
+.bloginfo {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.carrossel {
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin: -20px 137px;
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+.setaright {
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  z-index: 100;
+}
+.setaright img {
+  margin: 0 auto;
+}
+
+.setaright:hover {
+  filter: drop-shadow(0 10px 20px rgb(186, 220, 88, 0.5));
+}
+
+.setaleft {
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  cursor: pointer;
+  border: none;
+  transform: rotate(180deg);
+  position: absolute;
+  z-index: 101;
+}
+
+.setaleft img {
+  margin: 0 auto;
+}
+
+.setaleft:hover {
+  filter: drop-shadow(0 10px 20px rgb(186, 220, 88, 0.5));
+}
+
+.btnleft {
+  width: 56px;
+  position: relative;
+  top: 30%;
+  left: 8.5%;
+}
+
+.btnright {
+  width: 56px;
+  position: relative;
+  top: 30%;
+  left: 79%;
+}

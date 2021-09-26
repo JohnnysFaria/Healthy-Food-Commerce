@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.Input-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 55%;
+  height: 370px;
+  background: #badc58;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.linha {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin: 5px;
+  color: #1d164d;
+}
+
+.inputform {
+  display: block;
+  width: 343px;
+  height: 52px;
+  border: 0.5px solid #2d3561;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background: #ffffff;
+  transition: 0.2s;
+}

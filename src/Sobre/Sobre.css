@@ -1,0 +1,27 @@
+.sobre-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/src/img/bloco_services.svg');
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.services {
+  width: 410px;
+  height: 454px;
+  margin-left: 698px;
+  text-align: left;
+}
+.services h2 {
+  padding: 137px 0 32px 0;
+}
+
+.services p {
+  line-height: 27px;
+  text-align: left;
+  padding-bottom: 16px;
+}
+
+.botao-serv {
+  margin-top: 32px;
+}

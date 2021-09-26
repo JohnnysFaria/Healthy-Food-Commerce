@@ -1,0 +1,25 @@
+.botao {
+  display: block;
+  width: 138px;
+  height: 48px;
+  font-family: 'muli', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background: #badc58;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.botao:hover {
+  filter: drop-shadow(0 10px 20px rgb(186, 220, 88, 0.5));
+}
+
+.botao.branco {
+  color: #badc58;
+  background: #ffffff;
+}
+.botao.branco:hover {
+  filter: drop-shadow(0 10px 20px rgb(255, 255, 255, 0.5));
+}
