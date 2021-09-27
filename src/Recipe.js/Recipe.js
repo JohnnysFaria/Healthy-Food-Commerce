@@ -9,7 +9,7 @@ import comida4 from '../img/comida_4.svg';
 
 const Recipe = () => {
   return (
-    <div className={'container'}>
+    <div className={'recipe-container'}>
       <div className={'container-titulo'}>
         <Titulo h2>{'Our Best Recipes'} </Titulo>
         <Titulo p>

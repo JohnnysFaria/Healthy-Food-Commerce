@@ -1,6 +1,8 @@
 .sobre-container {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 725px;
   background-image: url('/src/img/bloco_services.svg');
   background-repeat: no-repeat;
   z-index: -1;
@@ -8,8 +10,7 @@
 
 .services {
   width: 410px;
-  height: 454px;
-  margin-left: 698px;
+  margin-left: 30%;
   text-align: left;
 }
 .services h2 {
@@ -24,4 +25,31 @@
 
 .botao-serv {
   margin-top: 32px;
+}
+
+@media (max-width: 1040px) {
+  .sobre-container {
+    background-image: none;
+    justify-content: center;
+  }
+  .bota-serv {
+    display: flex;
+    justify-content: center;
+  }
+  .services {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .sobre-container {
+    height: 540px;
+  }
+  .services h2 {
+    padding: 50px 0 32px 0;
+  }
+  .botao-serv {
+    display: flex;
+    justify-content: center;
+  }
 }

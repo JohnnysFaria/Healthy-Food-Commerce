@@ -15,11 +15,10 @@
 }
 
 .carrossel {
-  height: auto;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  margin: -20px 137px;
+  margin: -20px 40px;
 }
 
 .carrossel::-webkit-scrollbar {
@@ -70,12 +69,30 @@
   width: 56px;
   position: relative;
   top: 30%;
-  left: 8.5%;
+  left: 2.5%;
 }
 
 .btnright {
   width: 56px;
   position: relative;
   top: 30%;
-  left: 79%;
+  left: 86%;
+}
+@media (max-width: 800px) {
+  .btnright {
+    left: 76%;
+  }
+}
+@media (max-width: 590px) {
+  .btnright {
+    left: 66%;
+    top: 205px;
+  }
+  .btnleft {
+    top: 205px;
+  }
+  .blog-container {
+    height: auto;
+    padding-bottom: 30px;
+  }
 }

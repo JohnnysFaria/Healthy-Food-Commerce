@@ -40,3 +40,23 @@
 .nav-lista a {
   margin-right: 24px;
 }
+
+@media (max-width: 888px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .nav-home {
+    display: flex;
+    margin: 20px 0 0 0;
+    justify-content: center;
+  }
+  .nav-lista {
+    font-size: 13px;
+  }
+  .nav {
+    margin: 15px;
+  }
+  .nav-lista a {
+    margin: 8px;
+  }
+}

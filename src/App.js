@@ -1,5 +1,4 @@
 import './reset.css';
-import './App.css';
 import Landingpage from './Landingpage';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

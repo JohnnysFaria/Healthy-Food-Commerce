@@ -1,15 +1,17 @@
 import React from 'react';
 import { useState, useRef } from 'react';
-import Botao from '../Botao/Botao';
 import Titulo from '../Titulo/Titulo';
-import { NavLink } from 'react-router-dom';
 import './Register.css';
 import Header from '../Home/Header';
+import Footer from '../Footer/Footer';
 
 const Register = () => {
   const foco = useRef();
 
   const [endereco, setEndereco] = useState({
+    nome: '',
+    datadenascimento: '',
+    cpf: '',
     cep: '',
     rua: '',
     numero: '',
@@ -17,7 +19,17 @@ const Register = () => {
     cidade: '',
   });
 
-  const [erro, setErro] = useState(false);
+  const [enviado, setEnviado] = useState(false);
+  const [erro, setErro] = useState({
+    nome: '',
+    datadenascimento: '',
+    cpf: '',
+    cep: '',
+    rua: '',
+    numero: '',
+    bairro: '',
+    cidade: '',
+  });
 
   const atualizaForm = (item, valor) => {
     setEndereco({
@@ -49,26 +61,57 @@ const Register = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem('cadastro', JSON.stringify(endereco));
+    setEnviado(true);
+
+    setEndereco({
+      nome: '',
+      datadenascimento: '',
+      cpf: '',
+      cep: '',
+      rua: '',
+      numero: '',
+      bairro: '',
+      cidade: '',
+    });
+  };
+
   return (
     <div>
-      <div className="container">
-        <Header />
-
+      <Header />
+      <div className="register-container">
         <Titulo h2>Register</Titulo>
-        <form className="Input-container">
+        <form className="Input-container" onSubmit={(e) => handleSubmit(e)}>
           <div className="linha">
             <label>Nome</label>
-            <input className={'inputform'} autoFocus></input>
+            <input
+              className={'inputform'}
+              onChange={(e) => atualizaForm('nome', e.target.value)}
+              autoFocus
+            ></input>
+            {erro.nome && <p className={'erro'}>{erro.nome}</p>}
           </div>
 
           <div className="linha">
             <label>Data de nascimento</label>
-            <input className={'inputform'}></input>
+            <input
+              className={'inputform'}
+              onChange={(e) => atualizaForm('datadenascimento', e.target.value)}
+            ></input>
+            {erro.datadenascimento && (
+              <p className={'erro'}>{erro.datadenascimento}</p>
+            )}
           </div>
 
           <div className="linha">
             <label>CPF</label>
-            <input className={'inputform'}></input>
+            <input
+              className={'inputform'}
+              onChange={(e) => atualizaForm('cpf', e.target.value)}
+            ></input>
+            {erro.cpf && <p className={'erro'}>{erro.cpf}</p>}
           </div>
 
           <div className="linha">
@@ -79,6 +122,7 @@ const Register = () => {
               onChange={(e) => atualizaForm('cep', e.target.value)}
               onBlur={(e) => buscaCep(e, endereco.cep)}
             ></input>
+            {erro.cep && <p className={'erro'}>{erro.cep}</p>}
           </div>
 
           <div className="linha">
@@ -89,6 +133,7 @@ const Register = () => {
               onChange={(e) => atualizaForm('rua', e.target.value)}
               disabled={!(!endereco.rua && endereco.cidade)}
             ></input>
+            {erro.rua && <p className={'erro'}>{erro.rua}</p>}
           </div>
 
           <div className="linha">
@@ -99,6 +144,7 @@ const Register = () => {
               onChange={(e) => atualizaForm('bairro', e.target.value)}
               disabled
             ></input>
+            {erro.bairro && <p className={'erro'}>{erro.bairro}</p>}
           </div>
 
           <div className="linha">
@@ -108,6 +154,7 @@ const Register = () => {
               value={endereco.cidade}
               disabled
             ></input>
+            {erro.cidade && <p className={'erro'}>{erro.cidade}</p>}
           </div>
 
           <div className="linha">
@@ -118,10 +165,15 @@ const Register = () => {
               ref={foco}
               onChange={(e) => atualizaForm('numero', e.target.value)}
             ></input>
+            {erro.numero && <p className={'erro'}>{erro.numero}</p>}
           </div>
+          <button type="submit" className={'btn-enviar'}>
+            Enviar
+          </button>
         </form>
-        <Botao label={'CONFIRM'} />
+        {enviado && <p>Cadastro enviado</p>}
       </div>
+      <Footer />
     </div>
   );
 };

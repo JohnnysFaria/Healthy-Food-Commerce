@@ -43,3 +43,9 @@
 .btnjoin:hover {
   filter: drop-shadow(0 10px 20px rgb(186, 220, 88, 0.5));
 }
+
+@media (max-width: 425px) {
+  .input {
+    width: 200px;
+  }
+}
