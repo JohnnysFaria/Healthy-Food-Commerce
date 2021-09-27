@@ -18,9 +18,13 @@
 }
 
 @media (max-width: 425px) {
+  .home-container {
+    background: url('../img/Illustrationmobileteste3.svg') no-repeat right top;
+  }
   .search-container {
-    height: 179px;
-    margin: 80px 50px 41px 16px;
+    width: 318px;
+    margin: 70px 0 0 24px;
+    justify-content: flex-start;
   }
   .input-container {
     justify-content: space-evenly;

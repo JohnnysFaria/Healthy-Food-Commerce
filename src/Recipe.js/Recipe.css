@@ -19,6 +19,7 @@
 
 .cards-container {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1440px;
@@ -35,4 +36,7 @@
     width: 380px;
     height: 105px;
   }
+}
+.card-wrapper {
+  width: 100%;
 }
