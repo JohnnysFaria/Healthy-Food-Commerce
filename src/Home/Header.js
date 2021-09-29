@@ -1,35 +1,52 @@
 import React from 'react';
 import Botao from '../Botao/Botao';
-import './Header.css';
+import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
+import useMedia from '../useMedia';
 
-const Header = ({ label, placeholder }) => {
+const Header = () => {
+  const mobile = useMedia('(max-width: 60rem)');
+  const [mobileMenu, setMobileMenu] = React.useState(false);
   return (
-    <nav className={'nav-container'}>
-      <NavLink to="/">
-        <div className={'nav-home'}>Healthy Food</div>
-      </NavLink>
+    <>
+      <nav className={styles.navContainer}>
+        <NavLink to="/">
+          <div className={styles.navHome}>Healthy Food</div>
+        </NavLink>
 
-      <div className={'nav'}>
-        <ul className={'nav-lista'}>
-          <li>
-            <a>HEALTHY RECIPES</a>
-          </li>
-          <li>
-            <a>BLOG</a>
-          </li>
-          <li>
-            <a>JOIN</a>
-          </li>
-        </ul>
-        <nav>
-          <NavLink to="/Register" activeStyle={{ textDecoration: 'none' }}>
-            <Botao label={'Register'} branco />
-          </NavLink>
+        {mobile && (
+          <button
+            aria-label="Menu"
+            className={`${styles.mobileButton} ${
+              mobileMenu && styles.mobileButtonActive
+            }`}
+            onClick={(e) => setMobileMenu(!mobileMenu)}
+          ></button>
+        )}
+        <nav
+          className={`${mobile ? styles.navMobile : styles.nav} ${
+            mobileMenu && styles.navMobileActive
+          }`}
+        >
+          <ul className={styles.navLista}>
+            <li>
+              <a>HEALTHY RECIPES</a>
+            </li>
+            <li>
+              <a>BLOG</a>
+            </li>
+            <li>
+              <a>JOIN</a>
+            </li>
+          </ul>
+          <nav>
+            <NavLink to="/Register">
+              <Botao label={'Register'} branco />
+            </NavLink>
+          </nav>
         </nav>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
-
 export default Header;
