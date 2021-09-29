@@ -90,9 +90,15 @@
     top: 225px;
   }
 }
+@media (max-width: 700px) {
+  .btnright {
+    left: 78%;
+  }
+}
+
 @media (max-width: 590px) {
   .btnright {
-    left: 66%;
+    left: 64%;
     top: 205px;
   }
   .btnleft {

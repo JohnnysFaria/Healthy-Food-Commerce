@@ -30,7 +30,7 @@
   width: 530px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 540px) {
   .container-titulo {
     padding-top: 20px;
     width: 100%;

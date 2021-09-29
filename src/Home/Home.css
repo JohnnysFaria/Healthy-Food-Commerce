@@ -28,6 +28,9 @@
     justify-content: center;
     margin: 0;
   }
+  .search-container {
+    margin: 172px 0 0 40px;
+  }
 }
 @media (max-width: 425px) {
   .home-container {
@@ -42,5 +45,11 @@
     justify-content: space-evenly;
     height: 52px;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .search-container {
+    margin: 70px 0 50px 25px;
   }
 }
