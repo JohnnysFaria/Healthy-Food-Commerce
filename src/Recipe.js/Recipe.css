@@ -39,8 +39,9 @@
 
   .cards-container {
     flex-wrap: wrap;
+    margin-top: 15px;
   }
   .card-wrapper {
-    width: 254px;
+    width: 215px;
   }
 }

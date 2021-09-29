@@ -18,7 +18,6 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  margin: -20px 40px;
 }
 
 .carrossel::-webkit-scrollbar {
@@ -94,5 +93,14 @@
   .blog-container {
     height: auto;
     padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .btnright {
+    left: 60%;
+  }
+  .btnleft {
+    left: -25px;
   }
 }

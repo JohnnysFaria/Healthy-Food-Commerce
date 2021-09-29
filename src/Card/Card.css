@@ -35,5 +35,9 @@
   }
   .card-texto {
     padding: 19px;
+    text-align: center;
+  }
+  .card-button {
+    justify-content: center;
   }
 }
