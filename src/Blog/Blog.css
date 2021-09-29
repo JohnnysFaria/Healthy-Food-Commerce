@@ -74,8 +74,8 @@
 .btnright {
   width: 56px;
   position: relative;
-  top: 30%;
   left: 86%;
+  top: 230px;
 }
 @media (max-width: 800px) {
   .blog-container {
