@@ -6,6 +6,7 @@
   border-radius: 5px;
   padding: 0.5rem;
   background: #ffffff;
+  margin: 0 20px;
   transition: 0.2s;
 }
 
@@ -44,6 +45,8 @@
   filter: drop-shadow(0 10px 20px rgb(186, 220, 88, 0.5));
 }
 
+@media (max-width: 425px) {
+}
 @media (max-width: 425px) {
   .input {
     width: 200px;
