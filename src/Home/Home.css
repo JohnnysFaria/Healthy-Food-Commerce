@@ -16,7 +16,12 @@
   height: 52px;
   margin-left: 137px;
 }
-
+@media (max-width: 760px) {
+  .input-container {
+    justify-content: space-evenly;
+    margin-left: 0;
+  }
+}
 @media (max-width: 425px) {
   .home-container {
     background: url('../img/Illustration.svg') no-repeat right top;
