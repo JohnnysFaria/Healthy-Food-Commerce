@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 55%;
+  width: 30%;
   background: #badc58;
   border-radius: 5px;
   margin-bottom: 30px;
@@ -46,4 +46,20 @@
   border-radius: 5px;
   transition: 0.2s ease;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .Input-container {
+    width: 40%;
+  }
+  @media (max-width: 768px) {
+    .Input-container {
+      width: 50%;
+    }
+  }
+  @media (max-width: 425px) {
+    .Input-container {
+      width: 100%;
+    }
+  }
 }

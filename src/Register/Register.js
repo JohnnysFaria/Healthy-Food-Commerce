@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useRef } from 'react';
 import Titulo from '../Titulo/Titulo';
 import './Register.css';
-import Header from '../Home/Header';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const Register = () => {
@@ -89,6 +89,7 @@ const Register = () => {
             <input
               className={'inputform'}
               onChange={(e) => atualizaForm('nome', e.target.value)}
+              required
               autoFocus
             ></input>
             {erro.nome && <p className={'erro'}>{erro.nome}</p>}
@@ -98,7 +99,9 @@ const Register = () => {
             <label>Data de nascimento</label>
             <input
               className={'inputform'}
+              type={'date'}
               onChange={(e) => atualizaForm('datadenascimento', e.target.value)}
+              required
             ></input>
             {erro.datadenascimento && (
               <p className={'erro'}>{erro.datadenascimento}</p>
@@ -110,6 +113,7 @@ const Register = () => {
             <input
               className={'inputform'}
               onChange={(e) => atualizaForm('cpf', e.target.value)}
+              required
             ></input>
             {erro.cpf && <p className={'erro'}>{erro.cpf}</p>}
           </div>
@@ -121,6 +125,7 @@ const Register = () => {
               value={endereco.cep}
               onChange={(e) => atualizaForm('cep', e.target.value)}
               onBlur={(e) => buscaCep(e, endereco.cep)}
+              required
             ></input>
             {erro.cep && <p className={'erro'}>{erro.cep}</p>}
           </div>
@@ -132,6 +137,7 @@ const Register = () => {
               value={endereco.rua}
               onChange={(e) => atualizaForm('rua', e.target.value)}
               disabled={!(!endereco.rua && endereco.cidade)}
+              required
             ></input>
             {erro.rua && <p className={'erro'}>{erro.rua}</p>}
           </div>
@@ -143,6 +149,7 @@ const Register = () => {
               value={endereco.bairro}
               onChange={(e) => atualizaForm('bairro', e.target.value)}
               disabled
+              required
             ></input>
             {erro.bairro && <p className={'erro'}>{erro.bairro}</p>}
           </div>
@@ -153,6 +160,7 @@ const Register = () => {
               className={'inputform'}
               value={endereco.cidade}
               disabled
+              required
             ></input>
             {erro.cidade && <p className={'erro'}>{erro.cidade}</p>}
           </div>
@@ -164,6 +172,7 @@ const Register = () => {
               value={endereco.numero}
               ref={foco}
               onChange={(e) => atualizaForm('numero', e.target.value)}
+              required
             ></input>
             {erro.numero && <p className={'erro'}>{erro.numero}</p>}
           </div>

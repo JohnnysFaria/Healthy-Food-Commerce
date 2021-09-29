@@ -19,12 +19,11 @@
 
 @media (max-width: 425px) {
   .home-container {
-    background: url('../img/Illustrationmobileteste3.svg') no-repeat right top;
+    background: url('../img/Illustration.svg') no-repeat right top;
   }
   .search-container {
     width: 318px;
-    margin: 70px 0 0 24px;
-    justify-content: flex-start;
+    margin: 70px 0 50px 24px;
   }
   .input-container {
     justify-content: space-evenly;

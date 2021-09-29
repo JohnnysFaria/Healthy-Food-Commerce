@@ -36,4 +36,11 @@
     width: 380px;
     height: 105px;
   }
+
+  .cards-container {
+    flex-wrap: wrap;
+  }
+  .card-wrapper {
+    width: 254px;
+  }
 }

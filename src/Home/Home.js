@@ -1,10 +1,10 @@
 import React from 'react';
-import './Home.css';
-import Header from './Header';
+import Header from '../Header/Header';
 import Titulo from '../Titulo/Titulo';
-import InputButton from '../Input/InputButton';
 import Input from '../Input/Input';
+import InputButton from '../Input/InputButton';
 import lupa from '../img/magnifying-glass.svg';
+import './Home.css';
 
 const Home = () => {
   return (

@@ -29,7 +29,9 @@
 
 @media (max-width: 425px) {
   .card-container {
-    width: 360px;
+    width: 253px;
+    height: 393px;
+    flex-direction: column;
   }
   .card-texto {
     padding: 19px;
