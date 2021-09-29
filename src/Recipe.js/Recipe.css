@@ -8,7 +8,7 @@
 }
 
 .container-titulo {
-  width: 510px;
+  width: 100%;
   height: 104px;
   padding-top: 30px;
   text-align: center;
@@ -33,7 +33,7 @@
 @media (max-width: 425px) {
   .container-titulo {
     padding-top: 20px;
-    width: 380px;
+    width: 100%;
     height: 105px;
   }
 
