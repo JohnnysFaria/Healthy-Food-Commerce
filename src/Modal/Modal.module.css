@@ -1,0 +1,37 @@
+.container {
+  position: fixed;
+  top: 5rem;
+  z-index: 1000;
+}
+
+.welcome {
+  font-family: 'muli', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  max-width: 520px;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  color: #1d164d;
+  transform: translateY(1rem);
+  animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.close {
+  width: 25px;
+  height: 25px;
+  margin-left: 90%;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: #1d164d;
+  font-weight: 700;
+}

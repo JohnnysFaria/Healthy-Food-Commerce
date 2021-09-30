@@ -1,6 +1,5 @@
 import './reset.css';
 import Landingpage from './Landingpage';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Register from './Register/Register';
 

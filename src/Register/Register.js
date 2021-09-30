@@ -4,10 +4,12 @@ import Titulo from '../Titulo/Titulo';
 import './Register.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { setCookie } from '../setCookie';
+import Modal from '../Modal/Modal';
 
 const Register = () => {
   const foco = useRef();
-
+  const [modalVisible, setModalVisible] = useState(false);
   const [endereco, setEndereco] = useState({
     nome: '',
     datadenascimento: '',
@@ -37,13 +39,12 @@ const Register = () => {
       [item]: valor,
     });
   };
-
-  const atualizarEndereco = (veioDaApi) => {
+  const atualizarEndereco = (end) => {
     setEndereco({
       ...endereco,
-      rua: veioDaApi.logradouro,
-      bairro: veioDaApi.bairro,
-      cidade: veioDaApi.localidade,
+      rua: end.logradouro,
+      bairro: end.bairro,
+      cidade: end.localidade,
     });
   };
 
@@ -76,6 +77,14 @@ const Register = () => {
       bairro: '',
       cidade: '',
     });
+    setCookie('nome', endereco.nome);
+    setCookie('datadenascimento', endereco.datadenascimento);
+    setCookie('cpf', endereco.cpf);
+    setCookie('cep', endereco.cep);
+    setCookie('rua', endereco.rua);
+    setCookie('numero', endereco.numero);
+    setCookie('bairro', endereco.bairro);
+    setCookie('cidade', endereco.cidade);
   };
 
   return (
@@ -176,11 +185,17 @@ const Register = () => {
             ></input>
             {erro.numero && <p className={'erro'}>{erro.numero}</p>}
           </div>
-          <button type="submit" className={'btn-enviar'}>
+          <button
+            onClick={() => setModalVisible(true)}
+            type="submit"
+            className={'btn-enviar'}
+          >
             Enviar
           </button>
         </form>
-        {enviado && <p>Cadastro enviado</p>}
+        {enviado && modalVisible ? (
+          <Modal onClose={() => setModalVisible(false)} />
+        ) : null}
       </div>
       <Footer />
     </div>
