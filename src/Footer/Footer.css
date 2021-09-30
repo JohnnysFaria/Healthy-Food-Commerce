@@ -14,3 +14,10 @@
 .terms {
   padding: 10px;
 }
+
+@media (max-width: 620px) {
+  .footer-container {
+    flex-direction: column;
+    height: 60px;
+  }
+}

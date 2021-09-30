@@ -41,7 +41,7 @@
     margin: 70px 0 50px 24px;
   }
   .input-container {
-    width: 350px;
+    width: 330px;
     justify-content: space-evenly;
     height: 52px;
     margin-left: 0;
@@ -50,6 +50,10 @@
 
 @media (max-width: 350px) {
   .search-container {
+    width: 290px;
     margin: 70px 0 50px 25px;
+  }
+  .input-container {
+    width: 310px;
   }
 }

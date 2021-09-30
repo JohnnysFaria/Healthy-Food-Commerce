@@ -98,7 +98,7 @@
 
 @media (max-width: 590px) {
   .btnright {
-    left: 64%;
+    left: 65%;
     top: 205px;
   }
   .btnleft {
@@ -117,5 +117,11 @@
   }
   .btnleft {
     left: -25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btnright {
+    left: 55%;
   }
 }

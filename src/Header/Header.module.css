@@ -140,3 +140,9 @@
     margin: 8px;
   }
 }
+
+@media (max-width: 340px) {
+  .navHome {
+    width: 245px;
+  }
+}

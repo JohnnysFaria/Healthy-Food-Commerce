@@ -41,6 +41,12 @@
   color: #1d164d;
 }
 
+@media (max-width: 620px) {
+  .copy:first-child {
+    order: 3;
+  }
+}
+
 @media (max-width: 425px) {
   .subtitulo {
     padding: 20px;
