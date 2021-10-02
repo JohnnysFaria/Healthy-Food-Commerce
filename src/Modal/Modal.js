@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCookie } from '../setCookie';
+import { getStorage } from '../setCookie';
 import Styles from './Modal.module.css';
 
 const Modal = ({ onClose }) => {
@@ -8,7 +8,7 @@ const Modal = ({ onClose }) => {
       <button className={Styles.close} onClick={onClose}>
         X
       </button>
-      <h1 className={Styles.welcome}>{`Welcome ${getCookie()} `}</h1>
+      <h1 className={Styles.welcome}>{`Welcome ${getStorage()} `}</h1>
     </div>
   );
 };

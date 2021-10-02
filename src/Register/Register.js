@@ -39,6 +39,7 @@ const Register = () => {
       [item]: valor,
     });
   };
+
   const atualizarEndereco = (end) => {
     setEndereco({
       ...endereco,
@@ -61,6 +62,10 @@ const Register = () => {
       setErro(true);
     }
   };
+
+  function saveStorage(name, value) {
+    localStorage[name] = value;
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -92,12 +97,18 @@ const Register = () => {
       <Header />
       <div className="register-container">
         <Titulo h2>Register</Titulo>
-        <form className="Input-container" onSubmit={(e) => handleSubmit(e)}>
+        <form
+          id={'form'}
+          className="Input-container"
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <div className="linha">
-            <label>Nome</label>
+            <label htmlFor="nome">Nome</label>
             <input
               className={'inputform'}
+              name="nome"
               onChange={(e) => atualizaForm('nome', e.target.value)}
+              onBlur={(e) => saveStorage('nome', e.target.value)}
               required
               autoFocus
             ></input>
